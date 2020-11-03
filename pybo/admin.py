@@ -1,3 +1,17 @@
+# ---------------------------------------- [edit] ---------------------------------------- #
 from django.contrib import admin
 
-# Register your models here.
+from .models import Qusetion, Answer
+
+
+class QuestionAdmin(admin.ModelAdmin):
+    search_fields = ['subject']
+
+
+class AnswerAdmin(admin.ModelAdmin):
+    search_fields = ['subject']
+
+
+admin.site.register(Qusetion, QuestionAdmin)
+admin.site.register(Answer, AnswerAdmin)
+# ---------------------------------------------------------------------------------------- #
