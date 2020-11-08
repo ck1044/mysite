@@ -1,7 +1,8 @@
 # ------------------------------edit---------------------------#
 from django.db import models
 
-class Qusetion(models.Model):
+
+class Question(models.Model):
     subject = models.CharField(max_length=200)
     content = models.TextField()
     create_date = models.DateTimeField()
@@ -9,8 +10,9 @@ class Qusetion(models.Model):
     def __str__(self):
         return self.subject
 
+
 class Answer(models.Model):
-    question = models.ForeignKey(Qusetion, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
     content = models.TextField()
     create_date = models.DateTimeField()
 
