@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #-------------edit------------#
     'pybo.apps.PyboConfig',
+    'common.apps.CommonConfig',
     #-------------edit------------#
     'django.contrib.admin',
     'django.contrib.auth',
@@ -129,3 +130,5 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 # ---------------------------------------- [edit] ---------------------------------------- #
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
