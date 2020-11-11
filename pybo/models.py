@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Question(models.Model):
+    objects = None
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     subject = models.CharField(max_length=200)
     content = models.TextField()
