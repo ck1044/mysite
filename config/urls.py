@@ -17,7 +17,7 @@ from django.contrib import admin
 # ---------------------------------------- [edit] ---------------------------------------- #
 from django.urls import path, include
 from pybo import views
-
+from pybo.views import base_views
 # ---------------------------------------- [edit] ---------------------------------------- #
 
 urlpatterns = [
@@ -26,5 +26,6 @@ urlpatterns = [
     path('common/', include('common.urls')),
     # ---------------------------------------- [edit] ---------------------------------------- #
     path('pybo/', include('pybo.urls')),
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('', base_views.index, name='index'),  # '/' 에 해당되는 path
 ]
