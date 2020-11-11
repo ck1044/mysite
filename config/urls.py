@@ -26,6 +26,5 @@ urlpatterns = [
     path('common/', include('common.urls')),
     # ---------------------------------------- [edit] ---------------------------------------- #
     path('pybo/', include('pybo.urls')),
-    path('', views.index, name='index'),
     path('', base_views.index, name='index'),  # '/' 에 해당되는 path
 ]
